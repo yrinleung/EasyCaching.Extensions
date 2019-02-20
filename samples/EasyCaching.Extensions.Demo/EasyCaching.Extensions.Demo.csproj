@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EasyCaching.InMemory" Version="0.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EasyCaching.Extensions.AspectCore.Autofac\EasyCaching.Interceptor.AspectCore.Autofac.csproj" />
+    <ProjectReference Include="..\..\src\EasyCaching.Interceptor.Castle.Autofac\EasyCaching.Interceptor.Castle.Autofac.csproj" />
+  </ItemGroup>
+
+</Project>
