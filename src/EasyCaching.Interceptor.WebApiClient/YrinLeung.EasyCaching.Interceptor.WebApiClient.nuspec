@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>YrinLeung.EasyCaching.Interceptor.WebApiClient</id>
+    <version>1.0.0</version>
+    <title>YrinLeung.EasyCaching.Interceptor.WebApiClient</title>
+    <authors>YrinLeung</authors>
+    <owners>YrinLeung</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WebApiClient.JIT中集成EasyCaching组件</description>
+    <releaseNotes>
+      WebApiClient.JIT中集成EasyCaching组件
+    </releaseNotes>
+    <copyright>YrinLeung</copyright>
+    <tags>WebApiClient.JIT,EasyCaching,WebApiClient,YrinLeung</tags>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/yrinleung/EasyCaching.Extensions</projectUrl>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <dependency id="EasyCaching.Core" version="0.5.3" />
+      <dependency id="WebApiClient.JIT" version="0.3.3" />
+      <dependency id="Microsoft.Extensions.Http" version="2.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\EasyCaching.Interceptor.WebApiClient.dll" target="lib\netstandard2.0\EasyCaching.Interceptor.WebApiClient.dll" />
+    <file src="bin\Release\netstandard2.0\EasyCaching.Interceptor.WebApiClient.xml" target="lib\netstandard2.0\EasyCaching.Interceptor.WebApiClient.xml" />
+  </files>
+</package>

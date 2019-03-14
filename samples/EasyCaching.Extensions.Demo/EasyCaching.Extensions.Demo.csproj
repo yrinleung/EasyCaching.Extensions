@@ -6,14 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyCaching.InMemory" Version="0.5.1" />
+    <PackageReference Include="EasyCaching.InMemory" Version="0.5.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="WebApiClient.JIT" Version="0.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\EasyCaching.Extensions.AspectCore.Autofac\EasyCaching.Interceptor.AspectCore.Autofac.csproj" />
+    <ProjectReference Include="..\..\src\EasyCaching.Interceptor.AspectCore.Autofac\EasyCaching.Interceptor.AspectCore.Autofac.csproj" />
     <ProjectReference Include="..\..\src\EasyCaching.Interceptor.Castle.Autofac\EasyCaching.Interceptor.Castle.Autofac.csproj" />
+    <ProjectReference Include="..\..\src\EasyCaching.Interceptor.WebApiClient\EasyCaching.Interceptor.WebApiClient.csproj" />
   </ItemGroup>
 
 </Project>

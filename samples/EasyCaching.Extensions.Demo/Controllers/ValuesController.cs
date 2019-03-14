@@ -9,11 +9,13 @@
     {
         private readonly IAspectCoreService _aService;
         private readonly ICastleService _cService;
+        private readonly IWebApiClientService _webApiClientService;
 
-        public ValuesController(IAspectCoreService aService = null, ICastleService cService = null)
+        public ValuesController(IAspectCoreService aService = null, ICastleService cService = null, IWebApiClientService webApiClientService=null)
         {
             this._aService = aService;
             this._cService = cService;
+            this._webApiClientService = webApiClientService;
         }
 
         [HttpGet]
@@ -108,6 +110,14 @@
             {
                 return await Task.FromResult<string>("wait");
             }
+        }
+
+
+        [HttpGet]
+        [Route("WebApiClient")]
+        public async Task<string> WebApiClient()
+        {
+            return await _webApiClientService.GetHtml();
         }
     }
 }

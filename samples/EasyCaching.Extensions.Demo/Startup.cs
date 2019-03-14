@@ -20,7 +20,8 @@ namespace EasyCaching.Extensions.Demo
 
             //Castle
             services.AddScoped<ICastleService, CastleService>();
-            
+
+            services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>();
 
             services.AddEasyCaching(options =>
             {

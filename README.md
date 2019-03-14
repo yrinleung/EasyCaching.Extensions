@@ -1,15 +1,38 @@
 # EasyCaching.Extensions
-> 支持 netstandard2.0
+
+[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：[Autofac](https://github.com/autofac/Autofac)、[WebApiClient](https://github.com/dotnetcore/WebApiClient)
+
+### 1 WebApiClient扩展
+#### 1.1 Nuget
+```
+PM> Install-Package YrinLeung.EasyCaching.Interceptor.WebApiClient
+```
+支持 netstandard2.0
+
+#### 1.2 使用方法
+
+> Startup相关配置
+
+```c#
+
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+	//将WebClient接口注入
+    services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>();
+	...
+}
+
+```
 
 
-[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：
-- EasyCaching.Interceptor.AspectCore的[Autofac](https://github.com/autofac/Autofac)扩展
-- EasyCaching.Interceptor.Castle的[Autofac](https://github.com/autofac/Autofac)扩展
+### 2 AspectCore的Autofac扩展
+#### 2.1 Nuget
+```
+PM> Install-Package YrinLeung.EasyCaching.Interceptor.AspectCore.Autofac
+```
+支持 netstandard2.0
 
-
-### 1 EasyCaching.Interceptor.AspectCore扩展
-
-#### 1.1 使用方法
+#### 2.2 使用方法
 
 > Startup相关配置
 
@@ -30,9 +53,14 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 ```
 
 
-### 1 EasyCaching.Interceptor.Castle扩展
+### 3 Castle的Autofac扩展
+#### 3.1 Nuget
+```
+PM> Install-Package YrinLeung.EasyCaching.Interceptor.Castle.Autofac
+```
+支持 netstandard2.0
 
-#### 1.1 使用方法
+#### 3.2 使用方法
 
 > Startup相关配置
 
