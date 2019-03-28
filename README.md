@@ -68,7 +68,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 在Startup中，需要先添加EasyCaching，再添加CAP。否则无法订阅消息。
 
 #### 1.4 Demo
-查看 [Demo](https://github.com/yrinleung/EasyCaching.Extensions/tree/master/samples/HybridCache)
+查看 [Demo](https://github.com/yrinleung/EasyCaching.Extensions/tree/master/samples)
 
 ### 2 WebApiClient扩展
 #### 2.1 Nuget
