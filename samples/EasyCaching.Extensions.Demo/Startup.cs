@@ -21,7 +21,18 @@ namespace EasyCaching.Extensions.Demo
             //Castle
             services.AddScoped<ICastleService, CastleService>();
 
+            //将WebClient接口注入
             services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>();
+            //or
+            // services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>((httpApiConfig) =>
+            // {
+            // 	httpApiConfig.HttpHost = new Uri("http://www.baidu.com");
+            // });
+            //or
+            // services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>((httpApiConfig, p) =>
+            // {
+            // 	httpApiConfig.HttpHost = new Uri("http://www.baidu.com");
+            // });
 
             services.AddEasyCaching(options =>
             {

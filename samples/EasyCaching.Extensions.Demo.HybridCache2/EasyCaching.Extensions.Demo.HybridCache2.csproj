@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="2.5.0-preview-69219007" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="2.4.2" />
+    <PackageReference Include="EasyCaching.Bus.RabbitMQ" Version="0.5.4" />
+    <PackageReference Include="EasyCaching.HybridCache" Version="0.5.4.1" />
+    <PackageReference Include="EasyCaching.InMemory" Version="0.5.4" />
+    <PackageReference Include="EasyCaching.Redis" Version="0.5.4" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EasyCaching.Bus.CAP\EasyCaching.Bus.CAP.csproj" />
+  </ItemGroup>
+
+</Project>
