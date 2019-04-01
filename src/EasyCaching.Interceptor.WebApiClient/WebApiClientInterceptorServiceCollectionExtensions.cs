@@ -60,7 +60,8 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 var httpApiConfig = new HttpApiConfig(httpClient)
                 {
-                    ServiceProvider= provider
+                    ServiceProvider = provider,
+                    ResponseCacheProvider = new EasyCachingResponseCacheProvider(provider)
                 };
                 config.Invoke(httpApiConfig, provider);
                 var interceptor = new EasyCachingInterceptor(httpApiConfig);
