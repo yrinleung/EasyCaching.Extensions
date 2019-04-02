@@ -33,10 +33,10 @@ namespace EasyCaching.Interceptor.WebApiClient
         /// <param name="method"></param>
         public EasyCachingApiActionDescriptor(MethodInfo method) : base(method)
         {
-            this.EasyCachingEvictAttribute = method.GetCustomAttribute<EasyCachingEvictAttribute>();
+            this.EasyCachingEvictAttribute = method.GetCustomAttribute<EasyCachingEvictAttribute>(true);
 
-            var easyCachingPutAttribute = method.GetCustomAttribute<EasyCachingPutAttribute>();
-            var easyCachingAbleAttribute = method.GetCustomAttribute<EasyCachingAbleAttribute>();
+            var easyCachingPutAttribute = method.GetCustomAttribute<EasyCachingPutAttribute>(true);
+            var easyCachingAbleAttribute = method.GetCustomAttribute<EasyCachingAbleAttribute>(true);
 
             // 不设置Cache属性，Cache调用将不被触发
             if (easyCachingPutAttribute != null || easyCachingAbleAttribute != null)
