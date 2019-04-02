@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCaching.Extensions.Demo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCaching.Extensions.Demo.HybridCache2", "samples\EasyCaching.Extensions.Demo.HybridCache2\EasyCaching.Extensions.Demo.HybridCache2.csproj", "{E40B7661-ACB8-4604-873E-1A829A574CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCaching.Bus.CAP", "src\EasyCaching.Bus.CAP\EasyCaching.Bus.CAP.csproj", "{BD3070FF-0BB4-4CD5-8DD6-466396725698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCaching.Bus.CAP", "src\EasyCaching.Bus.CAP\EasyCaching.Bus.CAP.csproj", "{BD3070FF-0BB4-4CD5-8DD6-466396725698}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCaching.Extensions.Demo.HybridCache3", "samples\EasyCaching.Extensions.Demo.HybridCache3\EasyCaching.Extensions.Demo.HybridCache3.csproj", "{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCaching.Extensions.Demo.HybridCache3", "samples\EasyCaching.Extensions.Demo.HybridCache3\EasyCaching.Extensions.Demo.HybridCache3.csproj", "{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HybridCache", "HybridCache", "{269DB10F-5838-4A40-8777-8BC8EB092728}"
 EndProject
