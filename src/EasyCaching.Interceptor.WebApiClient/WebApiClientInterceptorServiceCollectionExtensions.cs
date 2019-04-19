@@ -65,7 +65,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 };
                 config.Invoke(httpApiConfig, provider);
                 var interceptor = new EasyCachingInterceptor(httpApiConfig);
-                return HttpApiClient.Create(typeof(TInterface), interceptor) as TInterface;
+                return HttpApi.Create(typeof(TInterface), interceptor) as TInterface;
             });
 
             return services;

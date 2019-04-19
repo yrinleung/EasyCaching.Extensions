@@ -1,6 +1,5 @@
 ﻿using EasyCaching.Core;
 using EasyCaching.Core.Interceptor;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApiClient;
 using WebApiClient.Contexts;
@@ -66,8 +65,8 @@ namespace EasyCaching.Interceptor.WebApiClient
             else
             {
                 //If not all , just remove the cached item by its cachekey.
-                var parameters = apiActionDescriptor.Parameters.Select(i => i.Value).ToArray();
-                var cacheKey = keyGenerator.GetCacheKey(apiActionDescriptor.Member, parameters, attribute.CacheKeyPrefix);
+                var arguments = apiActionDescriptor.Arguments;
+                var cacheKey = keyGenerator.GetCacheKey(apiActionDescriptor.Member, arguments, attribute.CacheKeyPrefix);
                 await cacheProvider.RemoveAsync(cacheKey);
             }
         }
