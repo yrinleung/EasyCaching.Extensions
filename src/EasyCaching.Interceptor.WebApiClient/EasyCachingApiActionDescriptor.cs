@@ -31,7 +31,8 @@ namespace EasyCaching.Interceptor.WebApiClient
         /// 请求Api描述
         /// </summary>
         /// <param name="method"></param>
-        public EasyCachingApiActionDescriptor(MethodInfo method) : base(method)
+        public EasyCachingApiActionDescriptor(MethodInfo method)
+            : base(method)
         {
             this.EasyCachingEvictAttribute = method.GetCustomAttribute<EasyCachingEvictAttribute>();
 
@@ -69,12 +70,22 @@ namespace EasyCaching.Interceptor.WebApiClient
         /// 缓存特性
         /// </summary>
         [DebuggerDisplay("Expiration = {Expiration}")]
-        private class EasyCachingActionCacheAttribute : Attribute, IApiActionCacheAttribute
+        private class EasyCachingActionCacheAttribute : Attribute, IApiActionCacheAttribute, IApiActionCachePolicyAttribute
         {
             /// <summary>
             /// key前缀
             /// </summary>
             private readonly string prefix;
+
+            /// <summary>
+            /// 读取缓存的策略
+            /// </summary>
+            private readonly CachePolicy readPolicy = CachePolicy.Ignore;
+
+            /// <summary>
+            /// 写入缓存的策略
+            /// </summary>
+            private readonly CachePolicy writePolicy = CachePolicy.Ignore;
 
             /// <summary>
             /// 获取缓存的时间戳
@@ -91,13 +102,35 @@ namespace EasyCaching.Interceptor.WebApiClient
                 if (easyCachingAble != null)
                 {
                     this.prefix = easyCachingAble.CacheKeyPrefix;
+                    this.readPolicy = CachePolicy.Include;
                     this.Expiration = TimeSpan.FromSeconds(easyCachingAble.Expiration);
                 }
                 else if (easyCachingPut != null)
                 {
                     this.prefix = easyCachingPut.CacheKeyPrefix;
+                    this.writePolicy = CachePolicy.Include;
                     this.Expiration = TimeSpan.FromSeconds(easyCachingPut.Expiration);
                 }
+            }
+
+            /// <summary>
+            /// 返回读取缓存的策略
+            /// </summary>
+            /// <param name="context"></param>
+            /// <returns></returns>
+            public CachePolicy GetReadPolicy(ApiActionContext context)
+            {
+                return this.readPolicy;
+            }
+
+            /// <summary>
+            /// 返回写入缓存的策略
+            /// </summary>
+            /// <param name="context"></param>
+            /// <returns></returns>
+            public CachePolicy GetWritePolicy(ApiActionContext context)
+            {
+                return this.writePolicy;
             }
 
             /// <summary>
@@ -109,9 +142,9 @@ namespace EasyCaching.Interceptor.WebApiClient
             {
                 var method = context.ApiActionDescriptor.Member;
                 var keyGenerator = context.GetService<IEasyCachingKeyGenerator>();
-                var parameters = context.ApiActionDescriptor.Parameters.Select(x => x.Value).ToArray();
+                var arguments = context.ApiActionDescriptor.Arguments;
 
-                var cacheKey = keyGenerator.GetCacheKey(method, parameters, this.prefix);
+                var cacheKey = keyGenerator.GetCacheKey(method, arguments, this.prefix);
                 return Task.FromResult(cacheKey);
             }
         }
