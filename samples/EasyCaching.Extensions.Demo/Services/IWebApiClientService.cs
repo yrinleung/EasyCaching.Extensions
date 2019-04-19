@@ -8,7 +8,7 @@
 
     public interface IWebApiClientService : IHttpApi
     {
-        [EasyCachingAble(Expiration = 10)]
+        [EasyCachingAble(Expiration = 1000)]
         [HttpGet("http://www.baidu.com/")]
         ITask<string> GetHtml();
     }

@@ -103,6 +103,7 @@ namespace EasyCaching.Interceptor.WebApiClient
                 {
                     this.prefix = easyCachingAble.CacheKeyPrefix;
                     this.readPolicy = CachePolicy.Include;
+                    this.writePolicy = CachePolicy.Include;
                     this.Expiration = TimeSpan.FromSeconds(easyCachingAble.Expiration);
                 }
                 else if (easyCachingPut != null)
