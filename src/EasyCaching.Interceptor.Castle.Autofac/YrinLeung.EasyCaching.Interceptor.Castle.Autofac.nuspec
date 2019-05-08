@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.EasyCaching.Interceptor.Castle.Autofac</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>YrinLeung.EasyCaching.Interceptor.Castle.Autofac</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
@@ -10,13 +10,21 @@
     <description>EasyCaching.Interceptor.Castle的Autofac扩展</description>
     <releaseNotes>
       EasyCaching.Interceptor.Castle的Autofac扩展
+      使用可以查看： https://github.com/yrinleung/EasyCaching.Extensions
+      版本说明：
+      1.0.1 EasyCaching依赖升级到0.5.6
     </releaseNotes>
     <copyright>YrinLeung</copyright>
-    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <tags>EasyCaching</tags>
+    <licenseUrl>https://github.com/yrinleung/EasyCaching.Extensions/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/yrinleung/EasyCaching.Extensions</projectUrl>
+    <repository type="git" url="https://github.com/yrinleung/EasyCaching.Extensions"  />
     <serviceable>true</serviceable>
     <dependencies>
-      <dependency id="EasyCaching.Interceptor.Castle" version="0.5.3" />
+      <group targetFramework=".NETStandard2.0" >
+        <dependency id="EasyCaching.Interceptor.Castle" version="0.5.6" />
+        <dependency id="Microsoft.Extensions.Options" version="2.2.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>

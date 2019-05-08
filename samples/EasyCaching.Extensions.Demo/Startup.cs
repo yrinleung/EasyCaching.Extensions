@@ -48,10 +48,10 @@ namespace EasyCaching.Extensions.Demo
 
 
             //使用AspectCore
-            builder.AddAspectCoreInterceptor();
+            builder.AddAspectCoreInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
 
             //使用Castle
-            //builder.AddCastleInterceptor();
+            //builder.AddCastleInterceptor(x=>x.CacheProviderName= EasyCachingConstValue.DefaultInMemoryName);
 
             return new AutofacServiceProvider(builder.Build());
         }

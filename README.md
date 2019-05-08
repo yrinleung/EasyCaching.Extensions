@@ -126,7 +126,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 	builder.Populate(services);
 	
 	//将AspectCore加入Autofac
-	builder.AddAspectCoreInterceptor();
+	builder.AddAspectCoreInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
 	
     return new AutofacServiceProvider(builder.Build());
 }
@@ -156,7 +156,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 	builder.Populate(services);
 	
 	//将Castle加入Autofac
-	builder.AddCastleInterceptor();
+	builder.AddCastleInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
 	
     return new AutofacServiceProvider(builder.Build());
 }
