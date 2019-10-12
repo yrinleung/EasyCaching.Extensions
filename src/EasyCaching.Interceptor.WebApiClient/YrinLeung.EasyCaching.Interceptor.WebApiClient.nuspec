@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.EasyCaching.Interceptor.WebApiClient</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <title>YrinLeung.EasyCaching.Interceptor.WebApiClient</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
@@ -15,6 +15,7 @@
       WebApiClient.JIT中集成EasyCaching组件
       1.0.3:重构使用WebApiClient提供的缓存接口实现集成EasyCaching
       1.0.4:使用WebApiClient1.0.5新的缓存策略接口
+      1.0.5:修复Net Core 3.0注入时报错
     </releaseNotes>
     <copyright>YrinLeung</copyright>
     <tags>WebApiClient.JIT,WebApiClient,EasyCaching</tags>

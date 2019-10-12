@@ -1,5 +1,6 @@
 ﻿using EasyCaching.Interceptor.WebApiClient;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging.Abstractions.Internal;
 using System;
 using WebApiClient;
 
@@ -56,17 +57,20 @@ namespace Microsoft.Extensions.DependencyInjection
                 throw new ArgumentNullException(nameof(config));
             }
 
-            services.AddHttpClient<TInterface>().AddTypedClient<TInterface>((httpClient, provider) =>
-            {
-                var httpApiConfig = new HttpApiConfig(httpClient)
+            var name = typeof(TInterface).ToString();
+            services
+                .AddHttpClient(name)
+                .AddTypedClient<TInterface>((httpClient, provider) =>
                 {
-                    ServiceProvider = provider,
-                    ResponseCacheProvider = new EasyCachingResponseCacheProvider(provider)
-                };
-                config.Invoke(httpApiConfig, provider);
-                var interceptor = new EasyCachingInterceptor(httpApiConfig);
-                return HttpApi.Create(typeof(TInterface), interceptor) as TInterface;
-            });
+                    var httpApiConfig = new HttpApiConfig(httpClient)
+                    {
+                        ServiceProvider = provider,
+                        ResponseCacheProvider = new EasyCachingResponseCacheProvider(provider)
+                    };
+                    config.Invoke(httpApiConfig, provider);
+                    var interceptor = new EasyCachingInterceptor(httpApiConfig);
+                    return HttpApi.Create(typeof(TInterface), interceptor) as TInterface;
+                });
 
             return services;
         }
