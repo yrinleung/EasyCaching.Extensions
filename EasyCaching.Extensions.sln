@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9AC93926-1D65-4F34-B58F-2D193F41C107}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCaching.Extensions.Demo.HybridCache3", "samples\EasyCaching.Extensions.Demo.HybridCache3\EasyCaching.Extensions.Demo.HybridCache3.csproj", "{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HybridCache", "HybridCache", "{269DB10F-5838-4A40-8777-8BC8EB092728}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Extensions.Caching.EasyCaching", "src\Microsoft.Extensions.Caching.EasyCaching\Microsoft.Extensions.Caching.EasyCaching.csproj", "{53565A80-77F9-4561-B8A1-44F7B8067BA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53565A80-77F9-4561-B8A1-44F7B8067BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53565A80-77F9-4561-B8A1-44F7B8067BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53565A80-77F9-4561-B8A1-44F7B8067BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53565A80-77F9-4561-B8A1-44F7B8067BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{BD3070FF-0BB4-4CD5-8DD6-466396725698} = {9AC93926-1D65-4F34-B58F-2D193F41C107}
 		{023C09E2-D7E8-4B55-9B9D-8B57E01AFC64} = {269DB10F-5838-4A40-8777-8BC8EB092728}
 		{269DB10F-5838-4A40-8777-8BC8EB092728} = {7C614D5F-4212-4562-8D08-5864EC9D356D}
+		{53565A80-77F9-4561-B8A1-44F7B8067BA9} = {9AC93926-1D65-4F34-B58F-2D193F41C107}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4A3FB4C4-E230-41F7-872A-43ED85C4658E}

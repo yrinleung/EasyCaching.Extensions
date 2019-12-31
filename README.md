@@ -1,6 +1,6 @@
 # EasyCaching.Extensions
 
-[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：[Autofac](https://github.com/autofac/Autofac)、[WebApiClient](https://github.com/dotnetcore/WebApiClient)、[CAP](https://github.com/dotnetcore/CAP)
+[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：[Autofac](https://github.com/autofac/Autofac)、[WebApiClient](https://github.com/dotnetcore/WebApiClient)、[CAP](https://github.com/dotnetcore/CAP)、[Microsoft.Extensions.Caching](https://github.com/aspnet/Extensions/tree/master/src/Caching)
 
 ### 1 CAP扩展
 #### 1.1 Nuget
@@ -167,3 +167,33 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 #### 4.3 Demo
 查看 [Demo](https://github.com/yrinleung/EasyCaching.Extensions/tree/master/samples/EasyCaching.Extensions.Demo)
 
+
+### 5 Microsoft.Extensions.Caching.Distributed.IDistributedCache使用EasyCaching实现
+#### 5.1 Nuget
+```
+PM> Install-Package YrinLeung.Microsoft.Extensions.Caching.EasyCaching
+```
+支持 netstandard2.0
+
+#### 5.2 使用方法
+
+> Startup相关配置
+
+```c#
+
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AddEasyCachingCache(config =>
+	{
+		//EasyCaching的CachingProvider的Name
+		config.CachingProviderName = "DefaultRedis";
+		//默认滑动过期时间,默认20分钟
+		config.DefaultSlidingExpiration = TimeSpan.FromMinutes(20);
+	});
+}
+
+```
+
+
+#### 5.3 Demo
+查看 [Demo](https://github.com/yrinleung/EasyCaching.Extensions/tree/master/samples/EasyCaching.Extensions.Demo)

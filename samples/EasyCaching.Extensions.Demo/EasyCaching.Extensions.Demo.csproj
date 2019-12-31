@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="EasyCaching.InMemory" Version="0.5.6" />
+    <PackageReference Include="EasyCaching.Redis" Version="0.5.6" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
@@ -15,6 +16,7 @@
     <ProjectReference Include="..\..\src\EasyCaching.Interceptor.AspectCore.Autofac\EasyCaching.Interceptor.AspectCore.Autofac.csproj" />
     <ProjectReference Include="..\..\src\EasyCaching.Interceptor.Castle.Autofac\EasyCaching.Interceptor.Castle.Autofac.csproj" />
     <ProjectReference Include="..\..\src\EasyCaching.Interceptor.WebApiClient\EasyCaching.Interceptor.WebApiClient.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Extensions.Caching.EasyCaching\Microsoft.Extensions.Caching.EasyCaching.csproj" />
   </ItemGroup>
 
 </Project>

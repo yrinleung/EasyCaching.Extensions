@@ -4,6 +4,7 @@ using Autofac.Extensions.DependencyInjection;
 using EasyCaching.Core;
 using EasyCaching.Extensions.Demo.Services;
 using EasyCaching.InMemory;
+using EasyCaching.Redis;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -36,8 +37,19 @@ namespace EasyCaching.Extensions.Demo
 
             services.AddEasyCaching(options =>
             {
-                options.UseInMemory();
+                options.UseRedis(config =>
+                {
+                    config.DBConfig.Endpoints.Add(new Core.Configurations.ServerEndPoint("127.0.0.1", 6379));
+                    config.DBConfig.Database = 5;
+                }, "myredis");
+                //options.UseInMemory();
 
+            });
+
+            services.AddEasyCachingCache(config =>
+            {
+                config.CachingProviderName = "myredis";
+                config.DefaultSlidingExpiration = TimeSpan.FromMinutes(20);
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

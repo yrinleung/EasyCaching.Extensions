@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>YrinLeung.Microsoft.Extensions.Caching.EasyCaching</id>
+    <version>1.0.0</version>
+    <title>YrinLeung.Microsoft.Extensions.Caching.EasyCaching</title>
+    <authors>YrinLeung</authors>
+    <owners>YrinLeung</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Distributed cache implementation of Microsoft.Extensions.Caching.Distributed.IDistributedCache using EasyCaching.
+      使用可以查看： https://github.com/yrinleung/EasyCaching.Extensions
+    </description>
+    <releaseNotes>
+      Distributed cache implementation of Microsoft.Extensions.Caching.Distributed.IDistributedCache using EasyCaching.
+    </releaseNotes>
+    <copyright>YrinLeung</copyright>
+    <tags>cache,distributedcache,EasyCaching</tags>
+    <licenseUrl>https://github.com/yrinleung/EasyCaching.Extensions/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/yrinleung/EasyCaching.Extensions</projectUrl>
+    <repository type="git" url="https://github.com/yrinleung/EasyCaching.Extensions"  />
+    <serviceable>true</serviceable>
+    <dependencies>
+      <dependency id="EasyCaching.Core" version="0.5.4.1" />
+      <dependency id="Microsoft.Extensions.Caching.Abstractions" version="2.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\Microsoft.Extensions.Caching.EasyCaching.dll" target="lib\netstandard2.0\Microsoft.Extensions.Caching.EasyCaching.dll" />
+    <file src="bin\Release\netstandard2.0\Microsoft.Extensions.Caching.EasyCaching.xml" target="lib\netstandard2.0\Microsoft.Extensions.Caching.EasyCaching.xml" />
+  </files>
+</package>
