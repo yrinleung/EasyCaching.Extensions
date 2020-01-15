@@ -1,7 +1,5 @@
 ﻿using DotNetCore.CAP;
 using DotNetCore.CAP.Internal;
-using EasyCaching.HybridCache;
-using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.EasyCaching.Bus.CAP</id>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <title>YrinLeung.EasyCaching.Bus.CAP</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
@@ -22,7 +22,7 @@
     <serviceable>true</serviceable>
     <dependencies>
       <group targetFramework=".NETStandard2.0" >
-        <dependency id="EasyCaching.HybridCache" version="0.8.3" />
+        <dependency id="EasyCaching.Core" version="0.8.3" />
         <dependency id="DotNetCore.CAP" version="3.0.0" />
       </group>
     </dependencies>

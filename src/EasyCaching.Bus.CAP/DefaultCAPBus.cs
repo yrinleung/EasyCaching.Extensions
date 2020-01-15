@@ -1,7 +1,6 @@
 ﻿using DotNetCore.CAP;
 using EasyCaching.Core;
 using EasyCaching.Core.Bus;
-using EasyCaching.HybridCache;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
