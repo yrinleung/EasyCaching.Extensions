@@ -1,19 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <UserSecretsId>a66de208-8641-4d33-a60d-7e8059da2278</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="2.5.0-preview-69219007" />
-    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="2.4.2" />
-    <PackageReference Include="EasyCaching.Bus.RabbitMQ" Version="0.5.4" />
-    <PackageReference Include="EasyCaching.HybridCache" Version="0.5.4.1" />
-    <PackageReference Include="EasyCaching.InMemory" Version="0.5.4" />
-    <PackageReference Include="EasyCaching.Redis" Version="0.5.4" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="3.0.0" />
+    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="3.0.0" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.0.0" />
+    <PackageReference Include="EasyCaching.HybridCache" Version="0.8.3" />
+    <PackageReference Include="EasyCaching.InMemory" Version="0.8.3" />
+    <PackageReference Include="EasyCaching.Redis" Version="0.8.3" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
   </ItemGroup>

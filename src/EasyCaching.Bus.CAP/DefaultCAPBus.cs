@@ -1,6 +1,7 @@
 ﻿using DotNetCore.CAP;
 using EasyCaching.Core;
 using EasyCaching.Core.Bus;
+using EasyCaching.HybridCache;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -62,7 +63,7 @@ namespace EasyCaching.Bus.CAP
         /// <param name="action">Action.</param>
         public override void BaseSubscribe(string topic, Action<EasyCachingMessage> action)
         {
-            //由于CAP是根据TopicAttribute启动订阅者的，所以系统启动时自动启动订阅者
+            //由于CAP是根据ICapSubscribe启动订阅者的，所以系统启动时自动启动订阅者
         }
     }
 }

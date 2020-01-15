@@ -1,10 +1,9 @@
-﻿using EasyCaching.Core.Bus;
+﻿using DotNetCore.CAP.Internal;
+using EasyCaching.Bus.CAP.Configurations;
+using EasyCaching.Core.Bus;
 using EasyCaching.Core.Configurations;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EasyCaching.Bus.CAP
 {
@@ -33,12 +32,8 @@ namespace EasyCaching.Bus.CAP
             configure(option);
             services.AddSingleton<CapBusOptions>(x => option);
             services.AddSingleton<IEasyCachingBus, DefaultCAPBus>();
-            services.AddSingleton(DynamicCreateSubscribeClass.GetCacheSubscribeType(option));
+            services.AddSingleton<IConsumerServiceSelector, EasyCachingConsumerServiceSelector>();
         }
 
-        public void WithServices(IApplicationBuilder app)
-        {
-            ServiceLocator.ServiceProvider = app.ApplicationServices;
-        }
     }
 }

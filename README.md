@@ -17,8 +17,7 @@ PM> Install-Package YrinLeung.EasyCaching.Bus.CAP
 
 public IServiceProvider ConfigureServices(IServiceCollection services)
 {
-	//注意：需要先添加EasyCaching，再添加CAP，存在先后顺序。否则无法订阅消息
-
+	
 	//use EasyCaching
 	services.AddEasyCaching(option =>
 	{
@@ -64,10 +63,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 ```
 
-#### 1.3 注意
-在Startup中，需要先添加EasyCaching，再添加CAP。否则无法订阅消息。
-
-#### 1.4 Demo
+#### 1.3 Demo
 查看 [Demo](https://github.com/yrinleung/EasyCaching.Extensions/tree/master/samples)
 
 ### 2 WebApiClient扩展

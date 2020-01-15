@@ -15,6 +15,6 @@ namespace EasyCaching.Bus.CAP
         /// <summary>
         ///  queue prefix name
         /// </summary>
-        public string QueuePrefixName { get; set; } = "capmq.queue.undurable.easycaching.subscriber.";
+        public string QueuePrefixName { get; set; } = "capmq.queue.undurable.easycaching.subscriber";
     }
 }

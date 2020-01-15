@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.EasyCaching.Bus.CAP</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>YrinLeung.EasyCaching.Bus.CAP</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       EasyCaching集成CAP；
-      使用可以查看： https://github.com/yrinleung/EasyCaching.Extensions
+      使用可以查看： https://github.com/yrinleung/EasyCaching.Extensions#1-cap%E6%89%A9%E5%B1%95
     </description>
     <releaseNotes>
-      EasyCaching集成CAP
+      1.1.0 重构CAP消费者注入的方式，同时CAP升级到3.0.0、EasyCaching.HybridCache升级到0.8.3
     </releaseNotes>
     <copyright>YrinLeung</copyright>
     <tags>EasyCaching,CAP</tags>
@@ -22,9 +22,8 @@
     <serviceable>true</serviceable>
     <dependencies>
       <group targetFramework=".NETStandard2.0" >
-        <dependency id="EasyCaching.Core" version="0.5.4" />
-        <dependency id="DotNetCore.CAP" version="2.4.2" />
-        <dependency id="System.Reflection.Emit" version="4.3.0" />
+        <dependency id="EasyCaching.HybridCache" version="0.8.3" />
+        <dependency id="DotNetCore.CAP" version="3.0.0" />
       </group>
     </dependencies>
   </metadata>
