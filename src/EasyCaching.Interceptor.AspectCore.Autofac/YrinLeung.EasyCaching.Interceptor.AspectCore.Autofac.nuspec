@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.EasyCaching.Interceptor.AspectCore.Autofac</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>YrinLeung.EasyCaching.Interceptor.AspectCore.Autofac</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
@@ -13,6 +13,7 @@
       使用可以查看： https://github.com/yrinleung/EasyCaching.Extensions
       版本说明：
       1.0.1 EasyCaching依赖升级到0.5.6
+      1.0.2:升级EasyCaching的版本
     </releaseNotes>
     <copyright>YrinLeung</copyright>
     <tags>EasyCaching</tags>
@@ -22,9 +23,9 @@
     <serviceable>true</serviceable>
     <dependencies>
       <group targetFramework=".NETStandard2.0" >
-        <dependency id="EasyCaching.Interceptor.AspectCore" version="0.5.6" />
-        <dependency id="AspectCore.Extensions.Autofac" version="1.2.0" />
-        <dependency id="Microsoft.Extensions.Options" version="2.2.0" />
+        <dependency id="EasyCaching.Interceptor.AspectCore" version="0.8.10" />
+        <dependency id="Microsoft.Extensions.Options" version="3.1.7" />
+        <dependency id="AspectCore.Extensions.Autofac" version="2.1.0" />
       </group>
     </dependencies>
   </metadata>

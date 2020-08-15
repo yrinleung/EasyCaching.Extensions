@@ -13,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyCaching.Core" Version="0.5.4.1" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
-    <PackageReference Include="WebApiClient.JIT" Version="1.0.5" />
+    <PackageReference Include="EasyCaching.Core" Version="0.8.10" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.7" />
+    <PackageReference Include="WebApiClient.JIT" Version="1.1.4" />
   </ItemGroup>
 
 </Project>

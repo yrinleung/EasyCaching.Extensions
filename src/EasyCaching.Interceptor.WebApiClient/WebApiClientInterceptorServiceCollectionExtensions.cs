@@ -1,6 +1,4 @@
 ﻿using EasyCaching.Interceptor.WebApiClient;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging.Abstractions.Internal;
 using System;
 using WebApiClient;
 

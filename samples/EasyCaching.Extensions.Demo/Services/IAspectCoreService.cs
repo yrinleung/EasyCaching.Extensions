@@ -14,13 +14,13 @@
         [EasyCachingEvict(IsBefore = true)]
         void DeleteSomething(int id);
 
-        [EasyCachingAble(Expiration = 10)]
+        [EasyCachingAble(Expiration = 60)]
         Task<string> GetUtcTimeAsync();
 
-        [EasyCachingAble(Expiration = 10)]
+        [EasyCachingAble(Expiration = 60)]
         Task<Demo> GetDemoAsync(int id);
 
-        [EasyCachingAble( Expiration = 10)]
+        [EasyCachingAble( Expiration = 60)]
         Demo GetDemo(int id);
     }
 

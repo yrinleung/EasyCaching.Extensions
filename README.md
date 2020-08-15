@@ -1,6 +1,6 @@
 # EasyCaching.Extensions
 
-[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：[Autofac](https://github.com/autofac/Autofac)、[WebApiClient](https://github.com/dotnetcore/WebApiClient)、[CAP](https://github.com/dotnetcore/CAP)、[Microsoft.Extensions.Caching](https://github.com/aspnet/Extensions/tree/master/src/Caching)
+[EasyCaching](https://github.com/dotnetcore/EasyCaching)项目的第三方扩展：[Autofac](https://github.com/autofac/Autofac)、[WebApiClient](https://github.com/dotnetcore/WebApiClient)、[CAP](https://github.com/dotnetcore/CAP)、[Microsoft.Extensions.Caching IDistributedCache](https://github.com/aspnet/Extensions/tree/master/src/Caching)
 
 ### 1 CAP扩展
 #### 1.1 Nuget
@@ -15,7 +15,7 @@ PM> Install-Package YrinLeung.EasyCaching.Bus.CAP
 
 ```c#
 
-public IServiceProvider ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection services)
 {
 	
 	//use EasyCaching
@@ -79,7 +79,7 @@ PM> Install-Package YrinLeung.EasyCaching.Interceptor.WebApiClient
 
 ```c#
 
-public IServiceProvider ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection services)
 {
 	//将WebClient接口注入
     services.AddWebApiClientUseHttpClientFactory<IWebApiClientService>();
@@ -115,16 +115,10 @@ PM> Install-Package YrinLeung.EasyCaching.Interceptor.AspectCore.Autofac
 
 ```c#
 
-public IServiceProvider ConfigureServices(IServiceCollection services)
+public void ConfigureContainer(ContainerBuilder builder)
 {
-	//Autofac配置
-	var builder = new ContainerBuilder();
-	builder.Populate(services);
-	
 	//将AspectCore加入Autofac
 	builder.AddAspectCoreInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
-	
-    return new AutofacServiceProvider(builder.Build());
 }
 
 ```
@@ -145,16 +139,10 @@ PM> Install-Package YrinLeung.EasyCaching.Interceptor.Castle.Autofac
 
 ```c#
 
-public IServiceProvider ConfigureServices(IServiceCollection services)
+public void ConfigureContainer(ContainerBuilder builder)
 {
-	//Autofac配置
-	var builder = new ContainerBuilder();
-	builder.Populate(services);
-	
 	//将Castle加入Autofac
 	builder.AddCastleInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
-	
-    return new AutofacServiceProvider(builder.Build());
 }
 
 ```

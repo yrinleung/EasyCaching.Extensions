@@ -37,11 +37,11 @@ namespace EasyCaching.Extensions.Demo
 
             services.AddEasyCaching(options =>
             {
-                //options.UseRedis(config =>
-                //{
-                //    config.DBConfig.Endpoints.Add(new Core.Configurations.ServerEndPoint("127.0.0.1", 6379));
-                //    config.DBConfig.Database = 5;
-                //}, "myredis");
+                options.UseRedis(config =>
+                {
+                    config.DBConfig.Endpoints.Add(new Core.Configurations.ServerEndPoint("127.0.0.1", 6379));
+                    config.DBConfig.Database = 5;
+                }, "myredis");
                 options.UseInMemory();
 
             });
@@ -58,10 +58,10 @@ namespace EasyCaching.Extensions.Demo
         public void ConfigureContainer(ContainerBuilder builder)
         {
             //使用AspectCore
-            //builder.AddAspectCoreInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
+            builder.AddAspectCoreInterceptor(x => x.CacheProviderName = EasyCachingConstValue.DefaultInMemoryName);
 
             //使用Castle
-            builder.AddCastleInterceptor(x=>x.CacheProviderName= EasyCachingConstValue.DefaultInMemoryName);
+            //builder.AddCastleInterceptor(x=>x.CacheProviderName= EasyCachingConstValue.DefaultInMemoryName);
 
         }
 

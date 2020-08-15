@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyCaching.InMemory" Version="0.8.3" />
-    <PackageReference Include="EasyCaching.Redis" Version="0.8.3" />
+    <PackageReference Include="EasyCaching.InMemory" Version="0.8.10" />
+    <PackageReference Include="EasyCaching.Redis" Version="0.8.10" />
   </ItemGroup>
 
   <ItemGroup>

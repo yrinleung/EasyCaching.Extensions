@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>YrinLeung.Microsoft.Extensions.Caching.EasyCaching</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>YrinLeung.Microsoft.Extensions.Caching.EasyCaching</title>
     <authors>YrinLeung</authors>
     <owners>YrinLeung</owners>
@@ -21,8 +21,8 @@
     <repository type="git" url="https://github.com/yrinleung/EasyCaching.Extensions"  />
     <serviceable>true</serviceable>
     <dependencies>
-      <dependency id="EasyCaching.Core" version="0.5.4.1" />
-      <dependency id="Microsoft.Extensions.Caching.Abstractions" version="2.2.0" />
+      <dependency id="EasyCaching.Core" version="0.8.10" />
+      <dependency id="Microsoft.Extensions.Caching.Abstractions" version="3.1.7" />
     </dependencies>
   </metadata>
   <files>
